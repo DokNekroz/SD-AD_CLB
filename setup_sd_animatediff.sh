@@ -18,7 +18,7 @@ wget https://huggingface.co/guoyww/animatediff/resolve/main/mm_sd_v15_v2.ckpt
 cd ../../..
 
 # 5. Установка зависимостей (можно заменить на custom requirements)
-pip install -r requirements_versions.txt
+pip install -r requirements.txt
 
 # 6. Запуск интерфейса
 python launch.py --share
