@@ -1,7 +1,11 @@
 #!/bin/bash
 
-# 1. Переменные окружения
+# Безопасный режим: остановить при ошибках
+set -e
+
+# 1. Переменные окружения для Colab
 export COMMANDLINE_ARGS="--skip-torch-cuda-test --no-half --precision full --use-cpu all --upcast-sampling"
+export PYTORCH_ENABLE_MPS_FALLBACK=1
 
 # 2. Клонирование stable-diffusion-webui
 git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git
@@ -11,14 +15,14 @@ cd stable-diffusion-webui
 mkdir -p extensions
 git clone https://github.com/continue-revolution/sd-webui-animatediff.git extensions/sd-webui-animatediff
 
-# 4. Установка motion-модулей
+# 4. Установка motion-модуля
 mkdir -p models/MotionModules
 cd models/MotionModules
-wget https://huggingface.co/guoyww/animatediff/resolve/main/mm_sd_v15_v2.ckpt
+wget -q --show-progress https://huggingface.co/guoyww/animatediff/resolve/main/mm_sd_v15_v2.ckpt
 cd ../../..
 
-# 5. Установка зависимостей (можно заменить на custom requirements)
-pip install -r requirements.txt
+# 5. Установка зависимостей — лучше в Colab запускать из Jupyter, не здесь
+# pip install -r requirements.txt
 
-# 6. Запуск интерфейса
-python launch.py --share
+# 6. Запуск интерфейса (важно: без --share тут, будет использоваться из Jupyter)
+python launch.py
