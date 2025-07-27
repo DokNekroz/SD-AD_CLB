@@ -22,7 +22,7 @@ wget -q --show-progress https://huggingface.co/guoyww/animatediff/resolve/main/m
 cd ../../..
 
 # 5. Установка зависимостей — лучше в Colab запускать из Jupyter, не здесь
-%cd /content/SD-AD_CLB/stable-diffusion-webui
+cd /content/SD-AD_CLB/stable-diffusion-webui
 pip install -r requirements.txt
 
 # 6. Запуск интерфейса
