@@ -24,7 +24,7 @@ cd /content/SD-AD_CLB/stable-diffusion-webui
 # 5. Установка зависимостей — лучше в Colab запускать из Jupyter, не здесь
 # cd /content/SD-AD_CLB/stable-diffusion-webui
 pip install -r requirements.txt
-
+pip install xformers --pre --upgrade
 # 6. Запуск интерфейса
-COMMANDLINE_ARGS="--medvram --opt-sdp-attention --precision full --no-half --upcast-sampling --share" \
+COMMANDLINE_ARGS="--xformers --no-half --disable-safe-unpickle --enable-insecure-extension-access --allow-code --medvram --opt-sdp-attention --precision full --upcast-sampling --skip-torch-cuda-test --listen --share" \
 python launch.py
