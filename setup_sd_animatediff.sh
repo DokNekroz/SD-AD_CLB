@@ -22,7 +22,10 @@ wget -q --show-progress https://huggingface.co/guoyww/animatediff/resolve/main/m
 cd ../../..
 
 # 5. Установка зависимостей — лучше в Colab запускать из Jupyter, не здесь
-# pip install -r requirements.txt
+%cd /content/SD-AD_CLB/stable-diffusion-webui
+pip install -r requirements.txt
 
-# 6. Запуск интерфейса (важно: без --share тут, будет использоваться из Jupyter)
+# 6. Запуск интерфейса
+%cd /content/SD-AD_CLB/stable-diffusion-webui
+COMMANDLINE_ARGS="--medvram --opt-sdp-attention --precision full --no-half --upcast-sampling --share" \
 python launch.py
