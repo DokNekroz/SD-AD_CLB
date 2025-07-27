@@ -26,6 +26,5 @@ cd /content/SD-AD_CLB/stable-diffusion-webui
 pip install -r requirements.txt
 
 # 6. Запуск интерфейса
-%cd /content/SD-AD_CLB/stable-diffusion-webui
 COMMANDLINE_ARGS="--medvram --opt-sdp-attention --precision full --no-half --upcast-sampling --share" \
 python launch.py
