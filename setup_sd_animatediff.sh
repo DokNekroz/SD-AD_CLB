@@ -19,10 +19,10 @@ git clone https://github.com/continue-revolution/sd-webui-animatediff.git extens
 mkdir -p models/MotionModules
 cd models/MotionModules
 wget -q --show-progress https://huggingface.co/guoyww/animatediff/resolve/main/mm_sd_v15_v2.ckpt
-cd ../../..
+cd /content/SD-AD_CLB/stable-diffusion-webui
 
 # 5. Установка зависимостей — лучше в Colab запускать из Jupyter, не здесь
-cd /content/SD-AD_CLB/stable-diffusion-webui
+# cd /content/SD-AD_CLB/stable-diffusion-webui
 pip install -r requirements.txt
 
 # 6. Запуск интерфейса
