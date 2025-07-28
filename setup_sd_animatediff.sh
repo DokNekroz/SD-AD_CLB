@@ -29,15 +29,17 @@ apt update && apt install -y megatools
 # 1. Models
 mkdir -p /content/temp_models && cd /content/temp_models
 megadl 'https://mega.nz/folder/Zm4gzIrD#UcuYvAvSxBDAJKbQAER0sg'
-mv -f * /content/SD-AD_CLB/stable-diffusion-webui/
+rm -rf /content/SD-AD_CLB/stable-diffusion-webui/models
+mkdir -p /content/SD-AD_CLB/stable-diffusion-webui/models
+mv -f * /content/SD-AD_CLB/stable-diffusion-webui/models/
 cd /content && rm -rf /content/temp_models
 
 
 # 3. Embeddings
-mkdir -p /content/temp_embeddings && cd /content/temp_embeddings
-megadl 'https://mega.nz/folder/MjBDGQ6A#2T485PZ8aYWpILuLWUKo4A'
-mv -f * /content/SD-AD_CLB/stable-diffusion-webui/embeddings/
-cd /content && rm -rf /content/temp_embeddings
+#mkdir -p /content/temp_embeddings && cd /content/temp_embeddings
+#megadl 'https://mega.nz/folder/MjBDGQ6A#2T485PZ8aYWpILuLWUKo4A'
+#mv -f * /content/SD-AD_CLB/stable-diffusion-webui/embeddings/
+#cd /content && rm -rf /content/temp_embeddings
 
 # 5. Установка зависимостей — лучше в Colab запускать из Jupyter, не здесь
 # cd /content/SD-AD_CLB/stable-diffusion-webui
