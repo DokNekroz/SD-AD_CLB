@@ -31,6 +31,7 @@ mkdir -p /content/temp_models && cd /content/temp_models
 megadl 'https://mega.nz/folder/Zm4gzIrD#UcuYvAvSxBDAJKbQAER0sg'
 rm -rf /content/SD-AD_CLB/stable-diffusion-webui/models
 mkdir -p /content/SD-AD_CLB/stable-diffusion-webui/models
+cd /content/temp_models
 mv -f * /content/SD-AD_CLB/stable-diffusion-webui/models/
 cd /content && rm -rf /content/temp_models
 
