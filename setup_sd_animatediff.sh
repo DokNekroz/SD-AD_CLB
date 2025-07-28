@@ -15,8 +15,6 @@ cd stable-diffusion-webui
 mkdir -p extensions
 git clone https://github.com/continue-revolution/sd-webui-animatediff.git extensions/sd-webui-animatediff
 
-
-
 # Установка megatools
 apt update && apt install -y megatools
 
