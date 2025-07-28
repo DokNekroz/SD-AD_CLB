@@ -7,11 +7,6 @@ set -e
 export COMMANDLINE_ARGS="--skip-torch-cuda-test --no-half --precision full --use-cpu all --upcast-sampling"
 export PYTORCH_ENABLE_MPS_FALLBACK=1
 
-#MEGA install 
-wget https://mega.nz/linux/repo/xUbuntu_20.04/amd64/megacmd-xUbuntu_20.04_amd64.deb
-apt install ./megacmd-xUbuntu_20.04_amd64.deb -y
-mega-login "{mega_email}" "{mega_password}"
-
 # 2. Клонирование stable-diffusion-webui
 git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git
 cd stable-diffusion-webui
