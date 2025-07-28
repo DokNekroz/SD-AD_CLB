@@ -16,12 +16,6 @@ mkdir -p extensions
 git clone https://github.com/continue-revolution/sd-webui-animatediff.git extensions/sd-webui-animatediff
 
 
-# 4. Установка motion-модуля
-mkdir -p models/MotionModules
-cd models/MotionModules
-wget -q --show-progress https://huggingface.co/guoyww/animatediff/resolve/main/mm_sd_v15_v2.ckpt
-cd /content/SD-AD_CLB/stable-diffusion-webui
-
 
 # Установка megatools
 apt update && apt install -y megatools
